@@ -1,0 +1,27 @@
+### 登录请求
+# @name login
+POST http://localhost:3000/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "ryy@163.com",
+    "password": "123"
+}
+
+
+### 
+@url = http://localhost:3000/graphql
+@token = {{login.response.body.token}}
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+X-Request-Type: GraphQL
+Authorization: Bearer {{token}}
+
+{
+    queryUsers{
+        _id
+        name
+        email
+        password
+    }
+}

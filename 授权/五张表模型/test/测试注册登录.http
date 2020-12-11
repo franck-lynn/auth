@@ -1,0 +1,28 @@
+
+### 注册请求
+POST http://localhost:3000/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "任盈盈",
+    "email": "ryy@163.com",
+    "password": "123"
+}
+### 注册请求
+POST http://localhost:3000/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "杨钰莹",
+    "email": "yyy@163.com",
+    "password": "789"
+}
+
+### 登录请求
+POST http://localhost:3000/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "ryy@163.com",
+    "password": "123"
+}

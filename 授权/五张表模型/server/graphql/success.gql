@@ -1,0 +1,5 @@
+# 表示mutation 成功与否的结果
+type IsMutationSuccess {
+    isMutationSuccess: Boolean,
+    msg: String
+}

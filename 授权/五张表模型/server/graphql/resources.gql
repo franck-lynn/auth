@@ -1,0 +1,9 @@
+# 资源表 obj
+# queryRoles addRole 等操作
+type Resource {
+    _id: ID!
+    name: String
+}
+type Mutation {
+    insertResources: [Resource]
+}

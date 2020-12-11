@@ -1,0 +1,5 @@
+p, role_gm, queryUsers, query
+p, bob, data2, write
+p, data2_admin, data2, read
+p, data2_admin, data2, write
+g, 高圆圆, role_gm

@@ -1,0 +1,2 @@
+# 自定义的指令
+directive @isRole on FIELD_DEFINITION 

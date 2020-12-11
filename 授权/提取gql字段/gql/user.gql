@@ -1,0 +1,10 @@
+type User {
+    _id: ID!
+    name: String! 
+    email: String! @isRole
+    password: String!
+}
+
+type Query {
+    queryUsers: [User]
+}

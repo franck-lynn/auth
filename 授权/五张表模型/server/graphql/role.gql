@@ -1,0 +1,13 @@
+
+type Role {
+    _id: ID!
+    name: String!
+}
+
+type Query {
+    queryRoles: [Role]
+}
+
+type Mutation {
+    addRole(name: String!): IsMutationSuccess
+}

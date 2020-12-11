@@ -1,0 +1,10 @@
+# 用户角色表
+type UserRole {
+    _id: ID!
+    user_id: ID!
+    role_id: ID!
+}
+
+type Mutation {
+    addUserRole(username: String, rolename: String): IsMutationSuccess
+}

@@ -1,0 +1,43 @@
+@url = http://localhost:3000/graphql
+### 插入数据
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+mutation{
+    insertContract(input: [
+        {catalog_number: "BT50_FMB40-75"},
+        {catalog_number: "AXMT1705PEER-G-ACK200"}
+    ]){
+        contract{
+            contract_no
+        }
+    } 
+}
+### 查询数据
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+{
+    queryContract{
+        contract_no,
+        _id
+        detail{
+            item_no
+            catalog_number
+        }
+    }
+}
+### 查询权利
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+{
+    queryRights{
+        createBy
+        owner
+        sharedTo
+    }
+}

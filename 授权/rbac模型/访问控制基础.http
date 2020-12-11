@@ -1,0 +1,22 @@
+@url = http://localhost:3000/graphql
+### 插入数据
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+mutation{
+    insertAuthor(name: "高圆圆"){
+        name
+    }
+}
+### 查询数据
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+{
+    queryAuthor {
+        _id
+        name
+    }
+}
